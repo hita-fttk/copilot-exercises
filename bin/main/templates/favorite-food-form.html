@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- このフォームでは、好きな食べ物の名前を入力するフィールドを用意してください -->
+    <h1>好きな食べ物</h1>
+    <!-- th:action`属性を、新しいメソッドを呼ぶように変更し、動作確認を行ってください -->
+    <form th:action="@{/food/show-favorite}" method="post">
+        <label for="food">好きな食べ物</label>
+        <input type="text" id="food" name="food">
+        <input type="submit" value="送信">
+</body>
+</html>
