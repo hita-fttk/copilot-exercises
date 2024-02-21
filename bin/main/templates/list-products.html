@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- このページでは、`th:each`を使用して、すべての商品を一覧表示してください。各商品は名前と価格が表示されるようにしてください -->
+    <h1>商品一覧</h1>
+    <table>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+</body>
+</html>
