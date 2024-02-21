@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- このページでは、ユーザーの名前と、`th:each`を使用して趣味のリストを一覧表示してください。例えば、「こんにちは、[名前]さん。あなたの趣味は以下の通りです：」と続けて趣味一覧を表示します -->
+    <p th:text="'こんにちは、' + ${name} + 'さん。あなたの趣味は以下の通りです：'"></p>
+    <ul>
+        <li th:each="hobby : ${hobbies}" th:text="${hobby}"></li>
+    </ul>
+
+</body>
+</html>
